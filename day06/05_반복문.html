@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+
+</head>
+<body>
+    <div id="result1">예제1의 출력문</div>
+    <hr>
+    <div id="result2">예제2의 출력문</div>
+</body>
+<script>
+    let max;
+    let min;
+
+    let num1 = prompt('수입력');
+    let num2 = prompt('수입력');
+
+    if(num1 > num2) {
+        max = num1;
+        min = num2;
+    } else {
+        max = num2;
+        min = num1;
+    }
+
+    console.log(`작은수 : ${min}, 큰수 : ${max}`);
+
+    let txt1 = "";
+
+    for(let i=min; i<=max; i++) {
+        txt1 += `${i}번 반복문 실행<br/>`;
+    }
+
+    let result1 = document.getElementById('result1');
+    result1.innerHTML = txt1;
+
+    // Q2. 두개의 숫자를 입력받아서 다음과 같이 출력하시오.
+
+    // 1과 3을 입력받을 경우
+    // 1 + 2 + 3 = 6
+
+    // 5와 2를 입력받을 경우
+    // 2 + 3 + 4 + 5 = 14
+    let sum = 0;
+    let txt2 = "";
+
+    for(let i=min; i<=max; i++) {
+        sum += Number(i); // 자료형 반드시 확인
+
+        if(i < max) {
+            txt2 += `${i} + `;
+        } else {
+            txt2 += `${i} = ${sum}`;
+        }
+    }
+
+    let result2 = document.getElementById('result2');
+    result2.innerHTML = txt2;
+
+</script>
+</html>

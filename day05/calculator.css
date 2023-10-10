@@ -1,0 +1,85 @@
+
+table {
+    width: 400px;
+    height: 700px;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+tr {
+    width: 400px;
+    height: 100px;
+    border : 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    border : 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.formula {
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: azure;
+    text-align: end;
+    padding-right: 5%;
+}
+
+.result {
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: azure;
+    text-align: end;
+    padding-right: 5%;
+}
+
+.inputBtn {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.inputBtn:hover {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.inputNumBtn {
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: lightgray;
+}
+
+.inputNumBtn:hover {
+    font-size: 35px;
+    font-weight: bolder;
+    background-color: skyblue;
+}
+
+.inputACBtn {
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: gray;
+}
+
+.inputACBtn:hover {
+    font-size: 35px;
+    font-weight: bolder;
+    background-color: cadetblue;
+}
+
+.inputCalBtn {
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: orange;
+}
+
+.inputCalBtn:hover {
+    font-size: 35px;
+    font-weight: bolder;
+    background-color: tomato;
+}

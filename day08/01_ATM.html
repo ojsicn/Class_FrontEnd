@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>ATM</title>
+
+</head>
+<body>
+    <fieldset id="fieldset_ATM">
+        <legend><img src="ATM.PNG"></legend>
+
+        <input type="text" id="amount" placeholder="금액을 입력하세요" onclick="Account.clean()">
+        <br>
+        <img src="입금.PNG" id="deposit" onclick="Account.deposit()">
+        <img src="출금.PNG" id="withdraw" onclick="Account.withdraw()">
+        <img src="잔액.PNG" id="balance" onclick="Account.msg()">
+        <h1>============</h1>
+
+        <h2 id="result"></h2>
+    </fieldset>
+</body>
+<script>
+
+    let Account = {};        // Account객체 생성
+    let amount;
+    let amount1;
+    let result = document.getElementById('result');
+
+    // 새로운 키(balance)에 값(0)을 추가
+    Account.balance = 0;
+
+    function insert() {
+        amount1 = document.getElementById('amount');
+        // 변수 amount1에는 입력창(input type="text")
+
+        amount = Number(amount1.value);
+        // amount1.value : 입력한 값(문자열)
+        // Number() : 문자열을 숫자형으로 바꿔준다.
+    }
+    
+    Account.deposit = function() {
+        insert();
+
+        if(amount1.value == "") {
+            result.innerHTML = `============<br>
+            입금할 금액을 입력하세요.`; // 백틱을 쓰면 br태그를 쓰지 않아도 줄바꿈 적용이 된다.
+        } else {
+            this.balance += amount;
+            result.innerHTML = `============<br>
+            ${amount}원 입금했습니다.`;
+        }
+
+        amount1.value = "";
+        amount1.focus();
+
+    }
+
+    Account.withdraw = function() {
+        insert();
+
+        if(amount1.value == "") {
+            result.innerHTML = `============<br>
+            출금할 금액을 입력하세요.`; // 백틱을 쓰면 br태그를 쓰지 않아도 줄바꿈 적용이 된다.
+        } else {
+            if(this.balance >= amount) {
+                this.balance -= amount;
+                result.innerHTML = `============<br>
+                ${amount}원 출금했습니다.`;
+            } else {
+                result.innerHTML = `============<br>
+                잔액이 ${amount - this.balance}원<br>
+                부족합니다.`;
+            }
+        }
+
+        amount1.value = "";
+        amount1.focus();
+    }
+
+    Account.msg = function() {
+        result.innerHTML = `============<br>
+        잔액 : ${this.balance}원`;
+    }
+
+    Account.clean = function() {
+        result.innerHTML = "";
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./day03/table.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>입력태그실습</title>
+
+</head>
+<body>
+    <form action="https://www.icia.co.kr">
+        <table>
+            <caption><h1>회원가입 페이지</h1></caption>
+            <tr>
+                <th>항목</th>
+                <th>내용</th>
+            </tr>
+            <tr>
+                <th>아이디</th>
+                <td>
+                    <input type="text" name="id" id="id">
+                </td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td>
+                    <input type="password" name="pw" id="pw">
+                </td>
+            </tr>
+            <tr>
+                <th>이름</th>
+                <td>
+                    <input type="text" name="name" id="name">
+                </td>
+            </tr>
+            <tr>
+                <th>성별</th>
+                <td>
+                    남 <input type="radio" name="gender" id="genderM" value="M">
+                    여 <input type="radio" name="gender" id="genderF" value="F">
+                </td>
+            </tr>
+            <tr>
+                <th>생년월일</th>
+                <td>
+                    <input type="date" name="birth" id="birth">
+                </td>
+            </tr>
+            <tr>
+                <th>연락처</th>
+                <td>
+                    <input type="tel" name="tel" id="tel">
+                </td>
+            </tr>
+            <tr>
+                <th>이메일</th>
+                <td>
+                    <input type="email" name="email" id="email">
+                </td>
+            </tr>
+            <tr>
+                <th>좋아하는 과목</th>
+                <td>
+                    Java <input type="checkbox" name="subj" value="Java">
+                    DB <input type="checkbox" name="subj" value="DB">
+                    JDBC <input type="checkbox" name="subj" value="JDBC">
+                    HTML <input type="checkbox" name="subj" value="HTML">
+                    CSS <input type="checkbox" name="subj" value="CSS">
+                    JS <input type="checkbox" name="subj" value="JS">
+                </td>
+            </tr>
+            <tr>
+                <th>좋아하는 색깔</th>
+                <td>
+                    <input type="color" name="color" id="color">
+                </td>
+            </tr>
+            <tr>
+                <th>사진 업로드</th>
+                <td>
+                    <input type="file" name="imageFile" id="imageFile">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="전송">
+                    <input type="reset" value="다시작성">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+
+<!-- https://www.icia.co.kr/
+    ? id=ojs
+    & pw=1234
+    & name=%EC%98%A4%EC%A0%95%EC%84%9D
+    & gender=M
+    & birth=2023-09-21
+    & tel=01046631120
+    & email=jungsoeko%40gmail.com
+    & subj=Java&subj=DB
+    & subj=JDBC
+    & subj=HTML
+    & subj=CSS
+    & subj=JS
+    & color=%2300ff00
+    & imageFile=favicon.ico -->

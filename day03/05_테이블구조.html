@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <!-- 6행 3열 테이블 -->
+    <table style="width: 100%;">
+        <caption>테이블 구조</caption>
+        <!-- caption : 테이블 제목 -->
+        <!-- thead, tbody, tfoot -->
+        <thead>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>31</td>
+                <td>32</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>41</td>
+                <td>42</td>
+                <td>43</td>
+            </tr>
+            <tr>
+                <td>51</td>
+                <td>52</td>
+                <td>53</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>61</td>
+                <td>62</td>
+                <td>63</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br/><hr/><br/>
+
+    <table style="width: 300px; height: 300px;">
+        <tr>
+            <td style="background-color: pink;" rowspan="2"></td>
+            <td style="background-color: pink;" colspan="2"></td>
+        </tr>
+        <tr>
+            <td style="background-color: hotpink;">
+            </td>
+            <td style="background-color: pink;" rowspan="2"></td>
+        </tr>
+        <tr>
+            <td style="background-color: pink;" colspan="2"></td>
+        </tr>
+    </table>
+</body>
+</html>

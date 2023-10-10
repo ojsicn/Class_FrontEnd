@@ -1,0 +1,28 @@
+/* body 영역의 배경색을 black으로 글씨 색상을 salmon으로 설정 */
+body{
+    background-color: black;
+    color: salmon;
+}
+
+h1{
+    font-size : 10px;
+    color: yellow;
+    border: 2px inset violet;
+    /*      2px : 선굵기 inset : 선종류 violet : 선색상*/
+}
+/*
+    h2, h3, h4, h5, h6
+    color : 마음대로 정하기
+
+    h2 : 2px solid red;
+    h3 : 2px dashed red;
+    h4 : 2px double red;
+    h5 : 2px groove red;
+    h6 : 2px ridge red;
+
+*/
+
+p {
+    background-color: aqua;
+    color: bisque;
+}

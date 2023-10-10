@@ -1,0 +1,22 @@
+/* [5] 일치 선택자(Basic Combinator) :  */
+li.oran {
+    color : orange;
+}
+
+span.hpink {
+    color : black;
+}
+
+/* [6] 자식 선택자(Child Combinator) : 선택자의 자식요소 */
+/* ul태그의 자식요소 선택 */
+ul>* {
+    background-color: aquamarine;
+}
+
+.oran+li {
+    color : red;
+}
+
+.cherry~li {
+    color : yellow;
+}

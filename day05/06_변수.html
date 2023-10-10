@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>변수(variable)</title>
+
+</head>
+<body>
+    
+</body>
+<script>
+    // 변수(variable) : 변하는 수(데이터)를 저장하는 곳
+    // var, let, const 
+
+    // int num = 10;
+    // int num = 20;
+    
+    // js에서는 이미 선언 된 변수를 다시 선언할 수 있다.
+    var num = 10;
+    var num = 20;
+
+    // var : 한번 선언된 변수를 다시 선언할 수 있다.
+    // let : 한번 선언된 변수를 다시 선언할 수 없다.
+    // const : 한번 선언된 변수를 다시 선언할 수 없다.
+    let numb = 10;
+    // let numb = 20; // err
+
+    const number = 10;
+    // const number = 20; // err
+
+    num = 100;
+    numb = 200;
+    // number = 300; 
+    // 재할당시 에러는 안나지만 실행시 에러(Uncaught TypeError TypeError: Assignment to constant variable.)
+    // java에서 final 한번 선언하면 변경불가
+
+    console.log(`num : ${num}`);        // 100
+    console.log(`num : ${numb}`);       // 200
+    console.log(`num : ${number}`);     // 10
+
+</script>
+</html>

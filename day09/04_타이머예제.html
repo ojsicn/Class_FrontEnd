@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>타이머예제</title>
+
+</head>
+
+<body>
+    <fieldset>
+        <legend>타이머</legend>
+
+        <div id="container">
+            <div id="screenContainer">
+                <div id="hhContainer">
+                    <input type="text" id="hhInput" value="0">
+                    <div id="hhBtnContainer">
+                        <button id="hhupBtn">▲</button>
+                        <button id="hhdownBtn">▼</button>
+                    </div>
+                    <h6 id="hhTxt">시간</h6>
+                </div>
+                <div id="miContainer">
+                    <input type="text" id="miInput" value="0">
+                    <button id="miupBtn">▲</button>
+                    <button id="midownBtn">▼</button>
+                    <h6 id="miTxt">분</h6>
+                </div>
+                <div id="ssContainer">
+                    <input type="text" id="ssInput" value="0">
+                    <button id="ssupBtn">▲</button>
+                    <button id="ssdownBtn">▼</button>
+                    <h6 id="ssTxt">초</h6>
+                </div>
+                <div id="strrstBtnContainer">
+                    <button id="strBtn">시작</button>
+                    <button id="rstBtn">리셋</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div id="addTimeBtnContainer">
+                <table>
+                    <tr>
+                        <td id="btnAdd10sec">10초</td>
+                        <td id="btnAdd1min">1분</td>
+                        <td id="btnAdd5min">5분</td>
+                        <td id="btnAdd10min">10분</td>
+                        <td id="btnAdd30min">30분</td>
+                        <td id="btnAdd1hour">1시간</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </fieldset>
+</body>
+<script>
+
+    /* 
+    
+        hhInput
+        hhupBtn
+        hhdownBtn
+
+        miInput
+        miupBtn
+        midownBtn
+
+        ssInput
+        ssupBtn
+        ssdownBtn
+
+        strBtn
+        rstBtn
+
+        btnAdd10sec
+        btnAdd1min
+        btnAdd5min
+        btnAdd10min
+        btnAdd30min
+        btnAdd1hour
+
+    */
+
+    // 시간
+    let count = 0;
+    let hh = 0;
+    let mi = 0;
+    let ss = 0;
+    let isRun = false;
+
+    // 버튼 및 스크린
+    let hhInput = document.getElementById("hhInput");
+    let hhupBtn = document.getElementById("hhupBtn");
+    let hhdownBtn = document.getElementById("hhdownBtn");
+
+    let miInput = document.getElementById("miInput");
+    let miupBtn = document.getElementById("miupBtn");
+    let midownBtn = document.getElementById("midownBtn");
+
+    let ssInput = document.getElementById("ssInput");
+    let ssupBtn = document.getElementById("ssupBtn");
+    let ssdownBtn = document.getElementById("ssdownBtn");
+
+    let strBtn = document.getElementById("strBtn");
+    let rstBtn = document.getElementById("rstBtn");
+
+    let btnAdd10sec = document.getElementById("btnAdd10sec");
+    let btnAdd1min = document.getElementById("btnAdd1min");
+    let btnAdd5min = document.getElementById("btnAdd5min");
+    let btnAdd10min = document.getElementById("btnAdd10min");
+    let btnAdd30min = document.getElementById("btnAdd30min");
+    let btnAdd1hour = document.getElementById("btnAdd1hour");
+
+
+    // 함수
+    // 시간
+    hhupBtn.addEventListener("click", () => {
+        hh++;
+        hhInput.value = hh;
+    });
+    hhdownBtn.addEventListener("click", () => {
+        hh--;
+        hhInput.value = hh;
+    });
+    // 분
+    miupBtn.addEventListener("click", () => {
+        mi++;
+        miInput.value = mi;
+    });
+    midownBtn.addEventListener("click", () => {
+        mi--;
+        miInput.value = mi;
+    });
+    // 초
+    ssupBtn.addEventListener("click", () => {
+        ss++;
+        ssInput.value = ss;
+    });
+    ssdownBtn.addEventListener("click", () => {
+        ss--;
+        ssInput.value = ss;
+    });
+
+    // 시간 추가
+    btnAdd10sec.addEventListener("click", () => {
+        ss += 10;
+        ssInput.value = ss;
+    });
+    btnAdd1min.addEventListener("click", () => {
+        mi++;
+        miInput.value = mi;
+    });
+    btnAdd5min.addEventListener("click", () => {
+        mi += 5;
+        miInput.value = mi;
+    });
+    btnAdd10min.addEventListener("click", () => {
+        mi += 10;
+        miInput.value = mi;
+    });
+    btnAdd30min.addEventListener("click", () => {
+        mi += 30;
+        miInput.value = mi;
+    });
+    btnAdd1hour.addEventListener("click", () => {
+        hh++;
+        hhInput.value = hh;
+    });
+
+    strBtn.addEventListener("click", () => {
+        ss = ssInput.value;
+        mi = miInput.value;
+        hh = hhInput.value;
+        isRun = true;
+        let interval = setInterval(() => {
+            count = hh*3600 + mi*60 + ss;
+            console.log(count);
+            if (isRun) {
+                console.log(isRun);
+                if(count == 0) {
+                    clearInterval(interval);
+                } else {
+                    count--;
+                    
+                }
+            } else {
+                clearInterval(interval);
+            }
+
+        }, 1000);
+    });
+
+    rstBtn.addEventListener("click", () => {
+        isRun = false;
+        ss = 0;
+        mi = 0;
+        hh = 0;
+        ssInput.value = ss;
+        miInput.value = mi;
+        hhInput.value = hh;
+    });
+
+
+
+</script>
+
+</html>

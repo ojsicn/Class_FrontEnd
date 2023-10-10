@@ -1,0 +1,48 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+}
+
+/* [1] HOVER : 선택자 요소에 마우스 커서가 올라가 있는 동안 선택 */
+.box:hover {
+    width: 110px;
+    height: 110px;
+    background-color: tomato;
+}
+
+/* [2] ACTIVE : 선택자 요소를 클릭하고 있는 동안 */
+.box:active {
+    width: 120px;
+    height: 120px;
+    background-color: seagreen;
+}
+
+a {
+    color : red;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+a:hover {
+    color : blue;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+a:visited {
+    color : olive;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+a:active {
+    color : green;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+/* [4] FOCUS : 선택자 요소가 포커스 되면 선택 => input 태그 */
+input:focus {
+    background-color: lightgray;
+}

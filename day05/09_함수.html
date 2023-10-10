@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title></title>
+
+</head>
+<body>
+    
+    <!-- input태그를 사용해서 버튼 4개 생성 -->
+    <!-- 더하기, 빼기, 곱하기, 나누기 -->
+
+    <fieldset>
+        <legend>계산기</legend>
+        <input type="number" id="num1" placeholder="첫번째 숫자"><br>
+        <input type="number" id="num2" placeholder="첫번째 숫자"><br>
+
+        <input type="button" value="+" onclick="sum()"/>
+        <input type="button" value="-" onclick="minus()"/>
+        <input type="button" value="*" onclick="multi()"/>
+        <input type="button" value="/" onclick="divide()"/>
+        <input type="button" value="C" onclick="clean()"/>
+
+        <div id="result">0</div>
+    </fieldset>
+
+
+</body>
+<script>
+    /*
+    
+        자바에서 method 만들때,
+
+        데이터타입 method이름() {
+            // 데이터타입이 void가 아닐 경우
+            return 데이터타입의 값;
+        }
+    
+    */
+
+   /*
+   
+        자바스크립트에서 함수 생성시
+        function 함수이름() {
+            실행 내용;
+            (return 값은 생략 가능)
+        }
+   
+   */
+
+    let num1;
+    let num2;
+
+    let result = document.getElementById("result");
+    // html 문서에서 id가 "result"인 요소를 가져온다.
+
+    // document.getElementById("num1");
+    // <input type="text" id="num1" placeholder="첫번째숫자"/>
+
+    // document.getElementById("num1").value;
+    // input태그에서 입력한 값이 들어온다. (String 타입으로)
+
+    // Number(document.getElementById("num1").value);
+    // 입력한 값을 숫자 데이터로 변환시킨다.
+
+    // innerHTML : 해당 요소에 값을 html형식으로 넣는다.
+
+    // innerText : 해당 요소에 html 형식이 아니라 문자 그대로 출력한다.
+
+    function insert() {
+        num1 = Number(document.getElementById("num1").value);
+        num2 = Number(document.getElementById("num2").value);
+    }
+
+    function sum() {
+        insert();
+        result.innerHTML = num1 + num2;
+    }
+
+    function minus() {
+        insert();
+        result.innerHTML = num1 - num2;
+    }
+
+    function multi() {
+        insert();
+        result.innerHTML = num1 * num2;
+    }
+
+    function divide() {
+        insert();
+        result.innerHTML = (num1 / num2).toFixed(2);
+        // .toFixed(n) : 소수점 n번째 자리까지 출력
+    }
+
+    function clean() {
+        document.getElementById("num1").value = "";
+        document.getElementById("num2").value = "";
+
+        result.innerHTML = "0";
+    }
+
+</script>
+</html>

@@ -1,0 +1,115 @@
+#container{
+    display: inline-block;
+}
+
+/* 시 */
+#hhContainer{
+    display: inline-block;
+}
+
+#hhBox {
+    display: inline-block;
+}
+
+#hhInput {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#hhBtnContainer{
+    display: inline-block;
+}
+
+#hhupBtn {
+    
+}
+
+#hhdownBtn {
+    
+}
+
+#hhTxt {
+    display: inline-block;
+}
+
+/* 분 */
+#miContainer{
+    display: inline-block;
+}
+
+#miBox {
+    display: inline-block;
+}
+
+#miInput {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#miBtnContainer{
+    display: inline-block;
+}
+
+#miupBtn {
+    display: inline-block;
+}
+
+#midownBtn {
+    display: inline-block;
+}
+
+#miTxt {
+    display: inline-block;
+}
+
+/* 초 */
+#ssContainer {
+    display: inline-block;
+}
+
+#ssBox {
+    display: inline-block;
+}
+
+#ssInput {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#ssupBtn {
+    display: inline-block;
+}
+
+#ssdownBtn {
+    display: inline-block;
+}
+
+#ssTxt {
+    display: inline-block;
+}
+
+/* 시작, 리셋버튼 */
+#strrstBtnContainer {
+    display: inline-block;
+}
+
+/* 시간 추가 버튼 */
+table, tr, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    width: 100px;
+    text-align: center;
+    background-color: lightgray;
+}
