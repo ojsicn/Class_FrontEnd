@@ -34,6 +34,7 @@
     let btn = $('#btn');
     let result = $('#result');
     let btn1 = $('.btn1');
+    let itv;
 
     // jQuery를 활용할 경우에는 addEventListener를 사용하지 않는다.
     // btn.addEventListener("click", () => {
@@ -44,6 +45,7 @@
     // $("#inputText").val(); => value값 가져오기
     
     let fColor = ["red", "orange", "yellow", "green", "blue", "purple"];
+    let fSize = 27; // h1태그 폰트사이즈 32px
     let i = -1;
     
     // btn.click(() => {
@@ -53,17 +55,21 @@
     //     }
     //     result.css("color", fColor[i]);
     // });
+    $("#btn").click(() => {
 
-    btn.click(() => {
-        setInterval(() => {
+        clearInterval(itv);
+
+        itv = setInterval(() => {
             i++;
+            fSize += 5;     // fSize = fSize + 5;
             if(i == fColor.length) {
                 i = 0;
+                fSize = 32;
             }
             result.css("color", fColor[i]);
-        }, 200);
+            result.css("font-size", `${fSize}px`);
+        }, 300);
     });
-
 
 </script>
 </html>
